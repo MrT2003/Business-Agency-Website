@@ -4,58 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Business Agency Website</title>
+    <meta name="title" content="Minh Trieu">
+    <meta name="description" content="This is a business agency html template made by codewithsadee">
 
     <!-- css -->
     <link rel="stylesheet" href="./css/style.css">
     <!-- ion-icon -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+    <!-- load images -->
+     <!-- <link rel="stylesheet" href="./images/hero-bg.jpg">
+     <link rel="stylesheet" href="./images/hero-slide-1.jpg">
+     <link rel="stylesheet" href="./images/hero-slide-2.jpg">
+     <link rel="stylesheet" href="./images/hero-slide-3.jpg"> -->
+
 </head>
 <body>
     <header></header>
     <main>
         <article>
             <!-- Hero -->
-            <section class="section hero has-bg-img">
+            <section class="section hero has-bg-img" style="background-image: url('./images/hero-bg.jpg');">
                 <div class="container">
                     <div class="hero_content">
-                        <h1>Crafting project specific solutions with expertise.</h1>
-                        <p>We’re a creative company that focuses on establishing long-term relationships with customers.</p>
-                        <button>
+                        <h1 class="hero_title">Crafting project specific solutions with expertise.</h1>
+                        <p class="hero_text">We’re a creative company that focuses on establishing long-term relationships with customers.</p>
+                        <div class="btn_wrapper">
                             <a class="btn btn_primary" href="">Explore Now</a>
                             <a class="btn btn_outline" href="">Contact Us</a>
-                        </button>
+                        </div>
                     </div>
-                    <div class="hero_slider">
+                    <div class="hero_slider" data-slider>
                         <div class="slider_inner">
-                            <ul class="slider_content">
+                            <ul class="slider_container" data-slider-container>
+
                                 <li class="slider_item">
+
                                     <div class="hero_card">
-                                        <figure class="img_holder">
-                                            <img src="./images/hero-slide-1.jpg" alt="" class="img_cover">
+                                        <figure class="img_holder" style="--width: 575, --height: 550;">
+                                            <img src="./images/hero-slide-1.jpg" width="575" height="550" alt="" class="img_cover">
                                         </figure>
                                     </div>
+
                                 </li>
                                 <li class="slider_item">
+
                                     <div class="hero_card">
-                                        <figure class="img_holder">
-                                            <img src="./images/hero-slide-2.jpg" alt="" class="img_cover">
+                                        <figure class="img_holder" style="--width: 575, --height: 550;">
+                                            <img src="./images/hero-slide-2.jpg" width="575" height="550" alt="" class="img_cover">
                                         </figure>
+
+                                        <button class="play_btn">
+                                            <ion-icon name="play"></ion-icon>
+                                        </button>
                                     </div>
+
                                 </li>
                                 <li class="slider_item">
+
                                     <div class="hero_card">
-                                        <figure class="img_holder">
-                                            <img src="./images/hero-slide-3.jpg" alt="" class="img_cover">
+                                        <figure class="img_holder" style="--width: 575, --height: 550;">
+                                            <img src="./images/hero-slide-3.jpg" width="575" height="550" alt="" class="img_cover">
                                         </figure>
                                     </div>
+
                                 </li>
                             </ul>
                         </div>
-                        <button class="slider_btn prev">
+
+                        <button class="slider_btn prev" data-slider-prev>
                             <ion-icon class="md-hydrated" name="arrow-back"></ion-icon>
                         </button>
-                        <button class="slider_btn next">
+                        <button class="slider_btn next" data-slider-next>
                             <ion-icon class="md-hydrated" name="arrow-forward"></ion-icon>
                         </button>
                     </div>
