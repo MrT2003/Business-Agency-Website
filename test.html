@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise</title>
+  </head>
+  <body>
+    <h1>School of Computer & Enginerring</h1>
+    <hr />
+    <h2 for="name">Register Form</h2>
+    <table>
+      <form method="post" action="">
+        <tr>
+          <td><label for="name">Full Name</label></td>
+          <td><input type="text" placeholder="Name" name="name"/></td>
+        </tr>
+        <tr>
+          <td><label for="id">ID</label></td>
+          <td><input type="text" placeholder="ID" name="id" /></td>
+        </tr>
+        <tr>
+          <td><label for="email">Email</label></td>
+          <td><input type="email" placeholder="email" /></td>
+        </tr>
+        <tr>
+          <td><label for="">Gender</label></td>
+          <td>
+            <label for=""><input type="radio" name="gender"/>Male</label>
+            <label for=""><input type="radio" name="gender"/>Female</label>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="">Field of Study</label></td>
+          <td>
+            <select name="Checkbox" id="">
+              <option value="1">CS</option>
+              <option value="2">DS</option>
+              <option value="3">IT</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="">List of Subjects</label></td>
+          <td>
+            <label for=""><input type="checkbox" name="subject"/>Principle of EE 1</label>
+            <br />
+            <label for=""><input type="checkbox" name="subject"/>Computer Network</label>
+            <br />
+            <label for=""
+              ><input type="checkbox" name="subject"/>Web application Development</label
+            >
+            <br />
+            <label for=""
+              ><input type="checkbox" name="subject"/>Object Oriented Programmer</label
+            >
+            <br />
+            <label for=""><input type="checkbox" name="subject"/>Computer Graphics</label>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="">Comments</label></td>
+          <td>
+            <textarea name="input_text" id="" cols="50" rows="10" style="overflow-y: scroll;"></textarea>
+          </td>
+        </tr>
+        <tr>
+            <td><input type="submit"></input></td>
+            <td><input type="reset" value="Cancel"></input></td>
+          </tr>
+      </form>
+    </table>
+  </body>
+</html>

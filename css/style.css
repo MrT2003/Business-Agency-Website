@@ -167,7 +167,7 @@ section {
   color: var(--charcoal);
 }
 .img_holder {
-  aspect-ratio: var(--width)/var(--height);
+  aspect-ratio: var(--width) / var(--height);
   background-color: var(--light-gray);
   overflow: hidden;
 }
@@ -175,6 +175,45 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* Header */
+.header .btn {
+  display: none;
+}
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-block: 20px;
+
+  box-shadow: var(--shadow-1);
+  z-index: 4;
+}
+.header .active {
+  background-color: var(--white);
+  position: fixed;
+  animation: slideIn 0.5s ease forwards;
+}
+@keyframes slideIn {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.header .container {
+  background-color: red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.header.active .logo_light,
+.header .logo_dark {
+  display: none;
 }
 
 /* Hero */
@@ -187,7 +226,7 @@ section {
   gap: 70px;
 }
 .hero_title {
-  color: var(--white)
+  color: var(--white);
 }
 .hero_text {
   font-size: var(--fs-5);
@@ -201,7 +240,8 @@ section {
   align-items: center;
   gap: 12px;
 }
-.hero_slider, .hero_card {
+.hero_slider,
+.hero_card {
   position: relative;
 }
 .hero_card .play_btn {
@@ -227,10 +267,16 @@ section {
     box-shadow: 0 0 0 20px transparent;
   }
 }
+
+.hero .slider_inner {
+  border-radius: var(--radius-10);
+  overflow: hidden;
+}
+
 .hero .slider_container {
   /* background-color: red; */
   /* relative ở đây có nghĩa gì */
-  /* position: relative; */
+  position: relative;
   display: flex;
   align-items: flex-start;
   gap: 8px;
@@ -245,18 +291,20 @@ section {
 .hero .slider_btn {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
   background-color: var(--white_a70);
   color: var(--charcoal);
   font-size: 2rem;
   padding: 12px;
   border-radius: var(--radius-circle);
+
   transition: var(--transition-1);
+  transform: translateY(-50%);
 }
 .hero .slider_btn:is(:hover, :focus-visible) {
   background-color: var(--white);
 }
 .hero .prev {
+  /* background-color: red; */
   left: 20px;
 }
 .hero .next {
