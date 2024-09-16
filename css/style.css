@@ -191,6 +191,41 @@ section {
   box-shadow: var(--shadow-1);
   z-index: 4;
 }
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.nav_open_btn {
+  font-size: 3.5rem;
+  color: var(--white);
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  background-color: var(--raisin-black);
+  color: var(--white);
+
+  max-width: 300px;
+  width: 100%;
+  height: 100vh;
+  
+  padding: 30px;
+  /* padding-block: ; */
+  
+}
+/* header active */
+.header.active .logo_light,
+.header .logo_dark {
+  display: none;
+}
+.header .logo_light,
+.header.active .logo_dark {
+  display: block;
+}
 .header .active {
   background-color: var(--white);
   position: fixed;
@@ -204,17 +239,10 @@ section {
     transform: translateY(0);
   }
 }
-.header .container {
-  background-color: red;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
+.header.active .nav_open_btn {
+  color: var(--charcoal);
 }
-.header.active .logo_light,
-.header .logo_dark {
-  display: none;
-}
+
 
 /* Hero */
 .hero {
@@ -309,4 +337,55 @@ section {
 }
 .hero .next {
   right: 20px;
+}
+
+/* SERVICE */
+.service {
+  text-align: center;
+}
+.section .section_title {
+  margin-block-end: 50px;
+}
+.service_card {
+  /* background-color: blue; */
+  padding: 40px;
+  border-radius: var(--radius-6);
+
+  box-shadow: var(--shadow-2);
+}
+.service_card .card_icon {
+  width: 60px;
+  height: 60px;
+  background-color: var(--violet-blue-crayola);
+  color: var(--white);
+  font-size: 2.5rem;
+  border-radius: var(--radius-circle);
+  margin-inline: auto;
+
+  /* Taị sao lại dùng grid */
+  display: grid;
+  place-items: center;
+}
+.service_card .card_icon ion-icon {
+  /* tăng độ dày */
+  --ionicon-stroke-width: 50px;
+}
+.card_title {
+  margin-block: 16px 10px;
+}
+.btn_text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--violet-blue-crayola);
+  font-weight: var(--fw-700);
+
+  gap: 4px;
+  margin-block-start: 10px;
+
+  transition: var(--transition-1);
+}
+.btn_text:is(:hover ,:focus-visible) {
+  opacity: 0.9;
 }
